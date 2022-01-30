@@ -26,12 +26,12 @@ const eqArrays = function(arr1, arr2) {//function takes two arrays
 const flatten = function(input) {
   const newArr = [];
   for (let i = 0; i < input.length; i++) {
-    //console.log(typeof input[i]);
-    if (!Array.isArray(input[i])) {
-      newArr.push(input[i]);
+    typeof input[i]; //printing type of the element
+    if (!Array.isArray(input[i])) { //checking if input at i is not an array
+      newArr.push(input[i]); //add to element to newArr
     } else {
-      for (let j = 0; j < input[i].length; j++) {
-        newArr.push(input[i][j]);
+      for (let j = 0; j < input[i].length; j++) { //second loop to handle the 2nd layer
+        newArr.push(input[i][j]); //pushes each element from 2nd layer into newArr, accesing position 2 to access 0 and 1 within
       }
     }
   }
