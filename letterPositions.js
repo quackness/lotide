@@ -23,7 +23,7 @@ const assertArraysEqual = function(array1, array2) {
 
 const letterPositions = function(sentence) {
   const results = {};
-  for (let i = 0; i < sentence.length; i ++) {//loop
+  for (let i = 0; i < sentence.length; i ++) {
     if (sentence[i] === " ") {//if there is a space then skip it
       continue;
     }
@@ -33,7 +33,6 @@ const letterPositions = function(sentence) {
       results[sentence[i]].push(i);//if the letter exists as a key in the object,then we push the index
     }
   }
-  
   return results;
 };
   
@@ -43,7 +42,7 @@ console.log(letterPositions("lighthouse in the house"));
 //letters will be keys, array will have an index of the letters
 //if there is more than 1 of the same letter push its index to an array
 
-
-
 assertArraysEqual(letterPositions("hello").e, [1]);
 assertArraysEqual(letterPositions("hello").h, [2]);
+assertArraysEqual(letterPositions("poland").p, [2]);
+assertArraysEqual(letterPositions("bye").y, [1]);
