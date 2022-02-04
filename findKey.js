@@ -41,7 +41,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-assertEqual("noma", "noma", true);
-assertEqual("noma", "Ora", false);
-assertEqual(" ", "Ora", false);
-assertEqual(" ", " ", true);
+assertEqual("noma", "noma"); //true
+assertEqual("noma", "Ora"); //false
+assertEqual(" ", "Ora"); //false
+assertEqual(" ", " "); //true
