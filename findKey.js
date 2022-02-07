@@ -18,14 +18,14 @@ const findKey = (object, callback) => {
   }
 };
 
-console.log(findKey({
+const results = findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },
   "noma":      { stars: 2 },
   "elBulli":   { stars: 3 },
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
-}, x => x.stars === 2)); // => "noma"
+}, x => x.stars === 2); // => "noma"
 
 //go through the object, scan through names and stars
 //if starr === 2 then return the key
@@ -41,7 +41,6 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-assertEqual("noma", "noma"); //true
-assertEqual("noma", "Ora"); //false
-assertEqual(" ", "Ora"); //false
-assertEqual(" ", " "); //true
+assertEqual(results, "noma"); //true
+assertEqual(results, "Ora"); //false
+assertEqual(results, " "); //false
