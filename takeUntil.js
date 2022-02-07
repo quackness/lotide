@@ -1,40 +1,21 @@
-
-// The function will return a "slice of the array with elements taken from the beginning." 
+// The function will return a "slice of the array with elements taken from the beginning."
 // It should keep going until the callback/predicate returns a truthy value.
 
 
-//Regular function (not required by the task)
-// const takeUntil = function(array, callback) {
-//       results = array.slice(0,5)
-//       return results;
-//     }
 
+//arrow function
 
-//traditional function
-const takeUntil = function (array, callback) {
+const takeUntil = (array, callback) => {
   const results = [];
   for (let item of array) {
     if (callback(item) === false) {
-      results.push(item) //push the digits to the array until reach a digit less than 0
-      console.log(callback(item), item);
+      results.push(item); //push the value to the array
+      //console.log(callback(item), item);
     } else {
-      //console.log(results)
       return results;
     }
   }
-}
-//arrow function
-// const takeUntil = (array, callback) => {
-//   const results = [];
-//   for (let item of array) {
-//     if (callback(item) === false) {
-//       results.push(item) //push the value to the array
-//       //console.log(callback(item), item);
-//     } else {
-//       return results;
-//     }
-//   }
-// }
+};
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, x => x < 0);
@@ -68,10 +49,7 @@ const eqArrays = function(arr1, arr2) {
   }
 };
 
-assertArraysEqual([ 1, 2, 5, 7, 2 ], [ 1, 2, 5, 7, 2 ], true);
-assertArraysEqual([], [ 1, 2, 5, 7, 2 ], false);
-assertArraysEqual(["cat", "dog"], [ 1, 2, 5, 7, 2 ], true);
-assertArraysEqual([ "I've", 'been', 'to', 'Hollywood' ], [ "I've", 'been', 'to', 'Hollywood' ], true);
-assertArraysEqual([ 'g', 'i', 'm', 'a' ], [ "I've", 'been', 'to', 'Hollywood' ], false);
-
-
+assertArraysEqual(results1, [ 1, 2, 5, 7, 2 ], true);
+assertArraysEqual(results1, [ "cat", "dog" ], false);
+assertArraysEqual(results2, [ "I've", 'been', 'to', 'Hollywood' ], true);
+assertArraysEqual(results2, [ ], false);
