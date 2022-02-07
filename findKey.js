@@ -1,12 +1,7 @@
+//go through the object, scan through names and stars
+//if stars === 2 then return the key
+//use object.entries it gives an array of the key at 0 and value at 1
 
-// const findKey = (object, callback) => {
-//   let items = Object.entries(object); //[["Blue Hill", { stars: 1 }]]
-//   for (let [key,value] of items) {
-//     if (callback(value) === true) {
-//       return key
-//     }
-//   }
-// };
 
 
 const findKey = (object, callback) => {
@@ -27,11 +22,7 @@ const results = findKey({
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 2); // => "noma"
 
-//go through the object, scan through names and stars
-//if starr === 2 then return the key
-//use object.entries it gives an array of the key at 0 and value at 1
-
-
+//TESTS
 
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
