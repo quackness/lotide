@@ -8,9 +8,7 @@ const assertEqual = function(actual, expected) {
 };
 
 // TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-
-// Emojis search https://unicode.org/emoji/charts/full-emoji-list.html#1f534
-// Unicode search https://www.fileformat.info/info/unicode/char/search.htm?q=U%2B1F535&preview=entity
-// C/C++/Java source 
+// assertEqual("Lighthouse Labs", "Bootcamp");
+// assertEqual(1, 1);
+//code to export the function
+module.exports = assertEqual;
