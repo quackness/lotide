@@ -1,3 +1,4 @@
+
 const middle = function(arr) {
   if (arr.length <= 2) { // 2 or less arguments in the array, the most specific condition at the top
     return [];
