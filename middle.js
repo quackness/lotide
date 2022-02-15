@@ -1,4 +1,4 @@
-const eqArrays = function(arr1, arr2) {//function takes two arrays
+const eqArrays = function(arr1, arr2) {
   if (arr1.length === arr2.length) {// checking if arrays are the same length
     for (let i = 0; i < arr1.length; i++) {//runs a loop on the first array
       if (arr1[i] !== arr2[i]) {//checks if arguments are not the same
@@ -7,6 +7,7 @@ const eqArrays = function(arr1, arr2) {//function takes two arrays
     }
     return true;
   }
+  return false;//arrays don't match length
 };
 
 
