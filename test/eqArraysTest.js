@@ -10,4 +10,4 @@ assertEqual(eqArrays(["1", "2", "3"], ["6", "3"]), false);
 
 //=============
 //below is another "require" approach using object deconstruction:
-//const {assertEqual, eqArrays} = require('../eqArrays');
+//const {assertEqual, eqArrays} = require('../eqArrays');gg

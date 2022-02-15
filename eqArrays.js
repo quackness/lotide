@@ -1,15 +1,17 @@
-//Implement a function eqArrays which takes in two arrays and returns true or false, based on a perfect match.
+const assertEqual = require('./assertEqual');
 
 const eqArrays = function(arr1, arr2) {
-  if (arr1.length === arr2.length) {// checking if arrays are the same length
-    for (let i = 0; i < arr1.length; i++) {//runs a loop on the first array
-      if (arr1[i] !== arr2[i]) {//checks if arguments are not the same
-        return false;
+  if (arr1.length === arr2.length) {
+    for (let i = 0; i < arr1.length; i++) {
+      if (arr1[i] !== arr2[i]) {
+        return false;//if the arrays are not identical
       }
     }
-    return true;
+    return true;//arrays are identical
   }
-};
+  return false;//arrays don't match length
+}
+
 
 module.exports = eqArrays;
 
