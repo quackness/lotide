@@ -12,20 +12,6 @@ const middle = function(arr) {
   
 module.exports = middle;
 
-//============
-// function *middle* should return the middle-most element
-//for array with one or two values it should return an empty array
-//odd amount of numbers in the array should return one element > modulo
-//even amount of numbers should return 2 > modulo
-//write test assertions
-// console.log(middle([1]));
-// console.log(middle([1, 2])); // => []
-// console.log(middle([1, 2, 3])); // => [2]
-// console.log(middle([1, 2, 3, 4, 5])); // => [3]
-// console.log(middle([1, 2, 3, 4])); // => [2, 3]
-// console.log(middle([1, 2, 3, 4, 11, 7, 6, 19, 33, 20])); // [ 11, 7 ]
-// console.log(middle([1, 2, 3, 4, 5, 6])); // => [3, 4]
-
 //TESTS have been moved to middleTest.js
 
 
