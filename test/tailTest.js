@@ -1,23 +1,20 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;//assertion library by Chai replaces assertEqual
 const tail = require('../tail');
-// TEST CODE
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2);
-assertEqual(result[0], "Lighthouse");
-assertEqual(result[1], "Labs");
 
-//Test Case 2: Check the original array
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-assertEqual(words.length, 3); // original array should still have 3 elements
 
-const animals = ["cat", "dog"];
-tail(animals);
-assertEqual(animals.length, 1); //should fail since the original array has 2 elements
-
-const result1 = tail([1]); //1 element
-assertEqual(result1.length, 0);
-
-const result2 = tail([]); //empty array
-assertEqual(result2.length, 0);
-assertEqual(result2[0], undefined);
+describe("#tail", () => {
+  it("returns 2 last elements of the array", () => {
+    assert.deepEqual(tail(['Hello', 'Lighthouse', 'Labs']), ['Lighthouse', 'Labs']);
+  });
+  it("tail function does not modify the lenght of the original array", () => {
+    const input = ['Hello', 'Lighthouse', 'Labs'];
+    tail(input);
+    assert.deepEqual(input.length, 3);
+  });
+  it("returns empty tail array if the original array is empty", () => {
+    assert.deepEqual(tail([]), []);
+  });
+  it("returns empty array if array has one element", () => {
+    assert.deepEqual(tail(['Hello']), []);
+  });
+});
