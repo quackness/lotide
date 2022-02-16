@@ -18,24 +18,25 @@ const without = require('./without');
 
 
 module.exports = {
-  head: head,
-  tail: tail,
-  middle: middle,
-  assertArraysEqual: assertArraysEqual,
-  assertEqual: assertEqual,
-  assertObjectsEqual: assertObjectsEqual,
-  countLetters: countLetters,
-  countOnly: countOnly,
-  eqArrays: eqArrays,
-  eqObjects: eqObjects,
-  findKeyByValue: findKeyByValue,
-  findKey: findKey,
-  flatten: flatten,
-  letterPositions: letterPositions,
-  map: map,
-  takeUntil: takeUntil,
-  without: without
+  head,
+  tail,
+  middle,
+  assertArraysEqual,
+  assertEqual,
+  assertObjectsEqual,
+  countLetters,
+  countOnly,
+  eqArrays,
+  eqObjects,
+  findKeyByValue,
+  findKey,
+  flatten,
+  letterPositions,
+  map,
+  takeUntil,
+  without
 };
 
-//some functions has assertions so the code runs in REPL, I have checked with mentors and was
-//advised it should be fine
+//some functions have assertions so the code runs in REPL, I have checked with mentors and was
+//advised it should be fine in terms of a code review. Not all of the functions had to be refactored
+//in the previous excercises.
