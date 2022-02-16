@@ -2,9 +2,9 @@ const countLetters = (string) => {
   let results = {};
   for (let letter of string) {
     if (results[letter]) {
-      results[letter] += 1;
+      results[letter] += 1;//add 1
     } else {
-      results[letter] = 1;
+      results[letter] = 1;//assign 1
     }
   }
   return results;
@@ -25,3 +25,8 @@ const assertEqual = function(actual, expected) {
 
 assertEqual(results1["L"],2);
 assertEqual(results1["H"],3);
+
+module.exports = countLetters;
+
+
+

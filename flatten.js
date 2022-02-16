@@ -38,13 +38,12 @@ const flatten = function(input) {
   return newArr;
 };
 
-console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
+flatten([1, 2, [3, 4], 5, [6]]); // => [1, 2, 3, 4, 5, 6]
 
 assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [ 1, 2, 3, 4, 5, 6 ], true);
 assertArraysEqual(flatten([1, 0, 3, [4, 9], [6, 9]]), [1,[0,8,4],0,6,1], false); //added a new test
 
-
-
+module.exports = flatten;
 
 
 

@@ -1,10 +1,6 @@
 // The function will return a "slice of the array with elements taken from the beginning."
 // It should keep going until the callback/predicate returns a truthy value.
 
-
-
-//arrow function
-
 const takeUntil = (array, callback) => {
   const results = [];
   for (let item of array) {
@@ -29,7 +25,6 @@ console.log(results2);
 
 
 //Tests
-
 const assertArraysEqual = function(array1, array2, expected) {
   if (eqArrays(array1, array2) === expected) {
     console.log(` 👍 Assertion Passed: [${array1}] [${array2}] === ${expected} `);
@@ -47,9 +42,12 @@ const eqArrays = function(arr1, arr2) {
     }
     return true;
   }
+  return false;
 };
 
 assertArraysEqual(results1, [ 1, 2, 5, 7, 2 ], true);
 assertArraysEqual(results1, [ "cat", "dog" ], false);
 assertArraysEqual(results2, [ "I've", 'been', 'to', 'Hollywood' ], true);
-assertArraysEqual(results2, [ ], false);
+assertArraysEqual(results2, [], false);
+
+module.exports = takeUntil;

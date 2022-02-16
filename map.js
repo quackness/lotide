@@ -1,7 +1,7 @@
 const words = ["ground", "control", "to", "major", "tom"];
 
 const map = function(array, callback) {
-  const results = []; //array bucket
+  const results = []; //arry accumulator
   for (let item of array) { //loop to go through each item in the array
     results.push(callback(item)); //create an array with 1st letter of each item
   }
@@ -36,8 +36,11 @@ const eqArrays = function(arr1, arr2) {
     }
     return true;
   }
+  return false;
 };
 
 assertArraysEqual([ 'g', 'c', 't', 'm', 't' ], [ 'g', 'c', 't', 'm', 't' ], true);
 assertArraysEqual([ 'g', 'c', 't', 'm', 't' ], [ 'o', 'o', 'o', 'p', 'i' ], false);
 assertArraysEqual([ 'g', 'i', 'm', 'a' ], [ 'o', 'o', 'o', 'p', 'i' ], false);
+
+module.exports = map;
