@@ -1,25 +1,6 @@
-
-
-const eqArrays = function(arr1, arr2) {//function takes two arrays
-  if (arr1.length === arr2.length) {// checking if arrays are the same length
-    for (let i = 0; i < arr1.length; i++) {//runs a loop on the first array
-      if (arr1[i] !== arr2[i]) {//checks if arguments are not the same
-        return false;
-      }
-    }
-    return true;
-  }
-};
-
-
-const assertArraysEqual = function(array1, array2) {
-  if (eqArrays(array1, array2)) {
-    console.log(` 👍 Assertion Passed: [${array1}] === [${array2}] `);
-  } else {
-    console.log(` 👎 Assertion Failed: [${array1}] !== [${array2}] `);
-  }
-};
-
+//create a for loop to go through the sentence
+//letters will be keys, array will have an index of the letters
+//if there is more than 1 of the same letter push its index to an array
 
 const letterPositions = function(sentence) {
   const results = {};
@@ -38,11 +19,30 @@ const letterPositions = function(sentence) {
   
 console.log(letterPositions("lighthouse in the house"));
 
-//create a for loop to go through the sentence
-//letters will be keys, array will have an index of the letters
-//if there is more than 1 of the same letter push its index to an array
+
+const eqArrays = function(arr1, arr2) {//function takes two arrays
+  if (arr1.length === arr2.length) {// checking if arrays are the same length
+    for (let i = 0; i < arr1.length; i++) {//runs a loop on the first array
+      if (arr1[i] !== arr2[i]) {//checks if arguments are not the same
+        return false;
+      }
+    }
+    return true;
+  }
+  return false;
+};
+
+const assertArraysEqual = function(array1, array2) {
+  if (eqArrays(array1, array2)) {
+    console.log(` 👍 Assertion Passed: [${array1}] === [${array2}] `);
+  } else {
+    console.log(` 👎 Assertion Failed: [${array1}] !== [${array2}] `);
+  }
+};
 
 assertArraysEqual(letterPositions("hello").e, [1]);
 assertArraysEqual(letterPositions("hello").h, [2]);
 assertArraysEqual(letterPositions("poland").p, [2]);
 assertArraysEqual(letterPositions("bye").y, [1]);
+
+module.exports = letterPositions;

@@ -23,14 +23,13 @@ const eqArrays = function(arr1, arr2) {
 };
 
 assertEqual(eqArrays(1,2), false);
-console.log(eqArrays([1,2,3],[1,2,3,4]));
-console.log(eqArrays([1,3,4],[1,3,4]));
-console.log(eqArrays([1,6],[3,6]));
-
+eqArrays([1,2,3],[1,2,3,4]);
+eqArrays([1,3,4],[1,3,4]);
+eqArrays([1,6],[3,6]);
 
 
 // Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
+// Otherwise you get back false
 const eqObjects = function(object1, object2) {
   if (Object.keys(object1).length !== Object.keys(object2).length) {//if objects are not the same length return false
     // console.log(Object.keys(object1))
@@ -67,3 +66,5 @@ assertEqual(eqObjects(ab, abc), false); // => false
 // console.log('get an array of object keys :>> ', Object.keys(abc));
 // console.log('get an array of object values :>> ', Object.values(abc));
 // console.log('get an array of object entries :>> ', Object.entries(abc));
+
+module.exports = eqObjects;

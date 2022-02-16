@@ -1,8 +1,6 @@
 //go through the object, scan through names and stars
 //if stars === 2 then return the key
-//use object.entries it gives an array of the key at 0 and value at 1
-
-
+//use object.entries, it gives an array of the key at 0 and value at 1
 
 const findKey = (object, callback) => {
   let items = Object.entries(object); //[["Blue Hill", { stars: 1 }]]
@@ -35,3 +33,5 @@ const assertEqual = function(actual, expected) {
 assertEqual(results, "noma"); //true
 assertEqual(results, "Ora"); //false
 assertEqual(results, " "); //false
+
+module.exports = findKey;
