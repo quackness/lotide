@@ -1,6 +1,6 @@
 {
   "name": "@reddenkarolina/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lotide is a library of JS helper functions, a clone of Lodash",
   "main": "index.js",
   "directories": {
